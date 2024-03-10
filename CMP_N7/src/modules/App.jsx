@@ -44,7 +44,7 @@ function App() {
     setData(newData)
   }
 
-  return (
+  return ( 
     <>
       <Cabecera />
       <div className='contenedor'>
