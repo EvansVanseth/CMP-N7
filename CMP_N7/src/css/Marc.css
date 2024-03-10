@@ -1,0 +1,72 @@
+/* -------------------------------------------------------- */
+/* MARKS */
+.app-mark {
+  padding: 2rem;
+  padding-bottom: 0rem;
+  margin-top: 5rem;
+  border:.3rem solid var(--colorPri);
+  border-radius: 1rem;
+  background: url(../assets/textura-metal-2.jpg);
+  background-size: cover;
+  min-height: 5rem;
+}
+@media (max-width: 750px) {
+  .app-mark {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.mark-header {
+  display: flex;
+  align-items: center;
+  margin-top: -5.3rem;
+  padding: 0.6rem 1.2rem;
+  border: .3rem solid var(--colorPri);
+  border-radius: 1rem;
+  background-color: var(--colorSec);
+  /* background: url(../img/textura-papel-2.jpg); */
+  background-size: cover;
+}
+@media (max-width: 750px) {
+  .mark-header {
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }  
+}
+.mark-group {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 750px) {
+  .mark-group {
+    width: 100%;
+  }
+}
+.mark-title {
+  margin: 0;
+}
+.mark-icon {
+  width: 3rem;
+  margin-left: 1rem;
+}
+.mark-btn {
+  font-weight: bold;
+  /* min-width: 4rem; */
+  margin: 0 auto; 
+  margin-left: 1rem;
+  color: var(--colorSec);
+  background-color: var(--colorPri);
+}
+.mark-btn:hover {
+  color: var(--colorPri);
+  background-color: var(--colorTer);
+}
+.mark-player {
+  margin: 0 0 0 1rem;
+  border: .2rem solid var(--colorPri);
+  border-radius: .5rem;
+  padding: .3rem 1rem;
+}

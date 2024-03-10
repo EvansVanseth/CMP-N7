@@ -1,0 +1,49 @@
+.turn-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem 0;
+  border: .2rem solid var(--colorPri);
+  border-radius: 1rem;
+  padding: .5rem;
+  background-color: var(--colorSec);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.turn-control button {
+  border: .2rem solid var(--colorPri);  
+  border-radius: .5rem;
+  color: var(--colorSec);
+  background-color: var(--colorPri);
+}
+
+.turn-control .tc-btn-disabled {
+  background-color: var(--colorTer);
+}
+
+.turn-finish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 2rem 0;
+  border: .2rem solid var(--colorPri);
+  border-radius: 1rem;
+  padding: .5rem;
+  background-color: var(--colorSec);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.turn-finish button {
+  border: .2rem solid var(--colorPri);  
+  border-radius: .5rem;
+  color: var(--colorSec);
+  background-color: var(--colorPri);
+}
+
+.turn-finish p {
+  font-size: 1.2rem;
+  text-align: center;
+}
