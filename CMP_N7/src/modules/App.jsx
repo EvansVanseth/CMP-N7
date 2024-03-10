@@ -1,6 +1,4 @@
 import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import { loadData, saveData } from '../keepStates.js'
 import Cabecera from './Cabecera.jsx'
 import TurnShow from './TurnShow.jsx'
@@ -54,12 +52,12 @@ function App() {
                           editar: ()=>{console.log('hello!!')} }} />
         <Marc Title='PODERES' 
               Logo= {{ alt: 'icono-poderes',
-                       src: '../CMP_N7/src/assets/icons/life.svg' }} 
+                       src: './src/assets/icons/life.svg' }} 
               Boton= {{ text: '+',
                         action: undefined }} />
         <Marc Title='ARMAS' 
               Logo= {{ alt: 'icono-armas',
-                       src: '../CMP_N7/src/assets/gun.svg' }} 
+                       src: './src/assets/gun.svg' }} 
               Boton= {{ text: '+',
                         action: undefined }} />                        
         <TurnReset Reset={finishCombat} />
