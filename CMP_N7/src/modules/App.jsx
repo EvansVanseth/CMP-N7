@@ -54,12 +54,12 @@ function App() {
                           editar: ()=>{console.log('hello!!')} }} />
         <Marc Title='PODERES' 
               Logo= {{ alt: 'icono-poderes',
-                       src: 'src/assets/icons/life.svg' }} 
+                       src: './src/assets/icons/life.svg' }} 
               Boton= {{ text: '+',
                         action: undefined }} />
         <Marc Title='ARMAS' 
               Logo= {{ alt: 'icono-armas',
-                       src: 'src/assets/gun.svg' }} 
+                       src: './src/assets/gun.svg' }} 
               Boton= {{ text: '+',
                         action: undefined }} />                        
         <TurnReset Reset={finishCombat} />
