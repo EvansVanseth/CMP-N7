@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import { loadData, saveData } from '../keepStates.js'
+// Modulos
 import Cabecera from './Cabecera.jsx'
 import TurnShow from './TurnShow.jsx'
 import Marc from './Marc.jsx'
 import Pie from './Pie.jsx'
 import TurnReset from './TurnReset.jsx'
+// CSS
 import '../css/App.css'
+// imagenes
+import iconPoderes from '../assets/icons/life.svg'
+import iconArmas from '../assets/gun.svg'
 
 function App() {
   // valores por defecto de la aplicación
@@ -52,12 +57,12 @@ function App() {
                           editar: ()=>{console.log('hello!!')} }} />
         <Marc Title='PODERES' 
               Logo= {{ alt: 'icono-poderes',
-                       src: './src/assets/icons/life.svg' }} 
+                       src: iconPoderes }} 
               Boton= {{ text: '+',
                         action: undefined }} />
         <Marc Title='ARMAS' 
               Logo= {{ alt: 'icono-armas',
-                       src: './src/assets/gun.svg' }} 
+                       src: iconArmas }} 
               Boton= {{ text: '+',
                         action: undefined }} />                        
         <TurnReset Reset={finishCombat} />
