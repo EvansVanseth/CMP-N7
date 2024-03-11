@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import '../css/Marc.css'
 
-function Marc({Children, Title, Logo, Boton, Jugador}) {
+function Marc({children, Title, Logo, Boton, Jugador}) {
 
   return (
     <div className="app-mark">
@@ -13,7 +13,7 @@ function Marc({Children, Title, Logo, Boton, Jugador}) {
           {Jugador?<h3 className="mark-player" onClick={Jugador.editar}>{Jugador.nombre}</h3>:undefined}
         </div>
       </div>
-      {Children}
+      {children}
     </div>
   )
 }

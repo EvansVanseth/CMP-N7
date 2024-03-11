@@ -1,0 +1,58 @@
+.tupla-mark {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: .1rem solid var(--colorPri);
+  border-radius: .7rem;
+  margin: 1rem 2rem;
+  font-size: 1.3rem;
+}
+
+.tupla-titulo {
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.tupla-text {
+  margin: 1rem;
+}
+
+.tupla-boton {
+  display: block;
+  padding: .3rem 1rem;
+  background-color: var(--colorPri);
+  color: var(--colorSec);
+  border: .2rem solid var(--colorPri);
+  border-radius: 1rem;
+}
+.tupla-valores {
+  display: flex;
+  border: .2rem solid var(--colorPri);
+  border-radius: 1rem;
+  padding: .1rem;
+  margin: 0 .5rem;
+}
+
+.tupla-valor {
+  padding: 0 .5rem;
+}
+
+.tupla-total {
+  padding: 0 .5rem;
+  font-weight: bold;
+}
+
+.shld-90 { border-color: var(--colorShld090);}
+.shld-70 { border-color: var(--colorShld070);}
+.shld-45 { border-color: var(--colorShld045);}
+.shld-25 { border-color: var(--colorShld025);}
+.shld-5 { border-color: var(--colorShld005);}
+.shld-0 { border-color: var(--colorShld000);}
+
+.life-100 { color: black; background-color: var(--colorLife100);}
+.life-90 { color: white; background-color: var(--colorLife090);}
+.life-70 { color: white; background-color: var(--colorLife070);}
+.life-45 { color: white; background-color: var(--colorLife045);}
+.life-25 { color: white; background-color: var(--colorLife025);}
+.life-5 { color: white; background-color: var(--colorLife005);}
+.life-0 { color: white; background-color: var(--colorLife000);}

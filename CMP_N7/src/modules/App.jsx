@@ -4,6 +4,7 @@ import { loadData, saveData } from '../keepStates.js'
 import Cabecera from './Cabecera.jsx'
 import TurnShow from './TurnShow.jsx'
 import Marc from './Marc.jsx'
+import Tupla from './Tupla.jsx'
 import Pie from './Pie.jsx'
 import TurnReset from './TurnReset.jsx'
 // CSS
@@ -54,7 +55,10 @@ function App() {
         <TurnShow Data={data} Start={startTurn} Finish={finishTurn} />
         <Marc Title='COMBATIENTE:' 
               Jugador= {{ nombre: data.playerName,
-                          editar: ()=>{console.log('hello!!')} }} />
+                          editar: ()=>{console.log('hello!!')} }} >
+          <Tupla titulo='ESCU' valor='23' total='30' bp='0'/>
+          <Tupla titulo='VIDA' valor='46' total='54' bp='0.5'/>
+        </Marc>
         <Marc Title='PODERES' 
               Logo= {{ alt: 'icono-poderes',
                        src: iconPoderes }} 
