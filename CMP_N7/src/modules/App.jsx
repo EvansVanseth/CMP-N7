@@ -12,6 +12,8 @@ import '../css/App.css'
 // imagenes
 import iconPoderes from '../assets/icons/life.svg'
 import iconArmas from '../assets/gun.svg'
+import iconVida from '../assets/icons/life.svg'
+import iconEscu from '../assets/gun.svg'
 
 function App() {
   // valores por defecto de la aplicación
@@ -56,8 +58,12 @@ function App() {
         <Marc Title='COMBATIENTE:' 
               Jugador= {{ nombre: data.playerName,
                           editar: ()=>{console.log('hello!!')} }} >
-          <Tupla titulo='ESCU' valor='123' total='130' bp='0.0'/>
-          <Tupla titulo='VIDA' valor='46' total='54' bp='0.5'/>
+          <Tupla valor='123' total='130' bp='0.0'
+                  icon = {{ alt: 'icono-escu',
+                  src: iconEscu }} />
+          <Tupla valor='46' total='54' bp='0.5'
+                 icon = {{ alt: 'icono-vida',
+                 src: iconVida }} />
         </Marc>
         <Marc Title='PODERES' 
               Logo= {{ alt: 'icono-poderes',
