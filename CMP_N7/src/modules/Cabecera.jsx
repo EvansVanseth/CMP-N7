@@ -7,7 +7,7 @@ function Cabecera() {
     <header className="app-header">
       <div className="app-header-in contenedor">
         <h1 className="app-title">Chaos Manager <span className="app-title-in">for</span> Players</h1>
-        <img className="app-logo" alt="logo de la aplicacion" src="src/assets/app-logo.png"></img>
+        <img className="app-logo" alt="logo de la aplicacion" src="./src/assets/app-logo.png"></img>
       </div>
     </header>
   )
