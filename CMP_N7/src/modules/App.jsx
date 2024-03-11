@@ -56,7 +56,7 @@ function App() {
         <Marc Title='COMBATIENTE:' 
               Jugador= {{ nombre: data.playerName,
                           editar: ()=>{console.log('hello!!')} }} >
-          <Tupla titulo='ESCU' valor='23' total='30' bp='0'/>
+          <Tupla titulo='ESCU' valor='123' total='130' bp='0.0'/>
           <Tupla titulo='VIDA' valor='46' total='54' bp='0.5'/>
         </Marc>
         <Marc Title='PODERES' 
