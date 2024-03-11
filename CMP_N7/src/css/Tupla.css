@@ -2,18 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border: .1rem solid var(--colorPri);
-  border-radius: .7rem;
-  margin: 1rem 2rem;
-  font-size: 1.2rem;
+  margin: .5rem 0;
+  font-size: 1.5rem;
 }
 
 .tupla-titulo {
   font-weight: bold;
-}
-
-.tupla-text {
-  margin: .5rem;
 }
 
 .tupla-boton {
@@ -24,11 +18,23 @@
   border: .2rem solid var(--colorPri);
   border-radius: 1rem;
 }
+.tupla-blindaje {
+  padding: .1rem;
+  border: .2rem solid transparent;
+  border-radius: 1.2rem;
+  margin: .3rem 0;
+}
+.blindaje-activo {
+  border-color: var(--colorBlinded);
+}
+
 .tupla-valores {
   display: flex;
+  justify-content: space-evenly;
   border: .2rem solid var(--colorPri);
   border-radius: 1rem;
   padding: .2rem .1rem;
+  min-width: 8rem;
 }
 
 .tupla-valor {
@@ -54,3 +60,44 @@
 .life-25 { color: white; background-color: var(--colorLife025);}
 .life-5 { color: white; background-color: var(--colorLife005);}
 .life-0 { color: white; background-color: var(--colorLife000);}
+
+.tupla-info {
+  font-size: 1.4rem;
+}
+
+.tupla-par {
+  display: flex;
+  align-items: center;
+  min-width: 7.5rem;
+  margin: 0;
+}
+.tupla-text {
+  margin: 0 .3rem;
+  padding: .4rem;
+  font-weight: bold;
+}
+
+.tupla-data {
+  padding: 0 .7rem;
+  border: .2rem solid black;
+  border-radius: .7rem;
+  margin: .2rem;
+}
+
+.tupla-re {
+  background-color: var(--colorShld090);
+}
+.tupla-rl {
+  background-color: var(--colorLife090);
+}
+.tupla-bp {
+  background-color: var(--colorBlinded);
+}
+
+.tupla-none {
+  display: none;
+}
+
+.tupla-hide {
+  visibility: hidden;
+}

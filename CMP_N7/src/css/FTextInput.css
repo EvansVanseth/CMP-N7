@@ -1,0 +1,19 @@
+.form-line-group {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+}
+.form-textinput-text {
+  width: 50%;
+  padding: 0 .5rem;
+  margin: 0 .5rem;
+  text-align: right;
+  border-bottom: .2rem solid var(--colorPri); 
+}
+.form-textinput-input {
+  width: 50%;
+  padding: .5rem 1rem;
+  margin: .5rem auto;
+  border: .2rem solid var(--colorPri);
+  border-radius: .5rem;
+}

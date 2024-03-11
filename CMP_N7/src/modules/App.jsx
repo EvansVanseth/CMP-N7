@@ -3,68 +3,53 @@ import { loadData, saveData } from '../keepStates.js'
 // Modulos
 import Cabecera from './Cabecera.jsx'
 import TurnShow from './TurnShow.jsx'
+import Combatiente from './Combatiente.jsx'
 import Marc from './Marc.jsx'
-import Tupla from './Tupla.jsx'
+import FormEditPlayer from './FormEditPlayer.jsx'
 import Pie from './Pie.jsx'
 import TurnReset from './TurnReset.jsx'
 // CSS
 import '../css/App.css'
 // imagenes
-import iconPoderes from '../assets/icons/life.svg'
+import iconPoderes from '../assets/poderes.svg'
 import iconArmas from '../assets/gun.svg'
-import iconVida from '../assets/icons/life.svg'
-import iconEscu from '../assets/gun.svg'
+
 
 function App() {
   // valores por defecto de la aplicación
   const defaultData = {
     turn: 0,
     inTurn: false,
-    playerName: 'Jugador'
+    playerName: 'Jugador',
+    lifeValue: 20,
+    lifeTotal: 20,
+    lifeBP: 0,
+    lifeRE: 0,
+    shldValue: 20,
+    shldTotal: 20,
+    shldBP: 0,
+    shldRE: 2
   }
   // ESTADOS
   const [data, setData] = useState(loadData(defaultData))
+  const [showFormPlayer, setShowFormPlayer] = useState(false)
   // LOGICA
-  /** Iniciar turno */
-  function startTurn () {
-    const newData = {...data}
-    newData.inTurn = true
-    newData.turn = data.turn + 1
+  function updateData (newData) {
     saveData(newData)
-    setData(newData)
+    setData(newData)    
   }
-  /** Finalizar turno */
-  function finishTurn () {
-    const newData = {...data}
-    newData.inTurn = false
-    saveData(newData)
-    setData(newData)
-  }
-  /** Finalizar combate */
-  function finishCombat () {
-    const newData = {...data}
-    newData.turn = 0
-    newData.inTurn = false
-    console.log(newData)
-    saveData(newData)
-    setData(newData)
-  }
+  // Cierre de formularios
+  function closeFormPlayer () { setShowFormPlayer(false); }
+
+  // Muestra de formualrios
+  function openFormPlayer () { setShowFormPlayer(true); }
 
   return ( 
     <>
       <Cabecera />
       <div className='contenedor'>
-        <TurnShow Data={data} Start={startTurn} Finish={finishTurn} />
-        <Marc Title='COMBATIENTE:' 
-              Jugador= {{ nombre: data.playerName,
-                          editar: ()=>{console.log('hello!!')} }} >
-          <Tupla valor='123' total='130' bp='0.0'
-                  icon = {{ alt: 'icono-escu',
-                  src: iconEscu }} />
-          <Tupla valor='46' total='54' bp='0.5'
-                 icon = {{ alt: 'icono-vida',
-                 src: iconVida }} />
-        </Marc>
+        <TurnShow Data={data} UpdateData={updateData} />
+        <Combatiente Data={data} UpdateData={updateData} onClickTitle={openFormPlayer}/>
         <Marc Title='PODERES' 
               Logo= {{ alt: 'icono-poderes',
                        src: iconPoderes }} 
@@ -75,9 +60,12 @@ function App() {
                        src: iconArmas }} 
               Boton= {{ text: '+',
                         action: undefined }} />                        
-        <TurnReset Reset={finishCombat} />
+        <TurnReset Data={data} UpdateData={updateData} />
       </div>
       <Pie />
+      {showFormPlayer?<FormEditPlayer onClose={closeFormPlayer} 
+                                      Data={data} 
+                                      UpdateData={updateData}/>:undefined}
     </>
   )
 }

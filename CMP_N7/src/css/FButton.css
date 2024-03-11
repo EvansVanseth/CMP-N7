@@ -1,0 +1,15 @@
+.form-button-group {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.form-button {
+  margin: 1rem 0 .5rem 1rem;
+  background-color: var(--colorPri);
+  color: var(--colorSec);
+}
+.form-button:hover {
+  background-color: var(--colorTer);
+  color: var(--colorPri)
+}

@@ -1,0 +1,23 @@
+.form-div-titulo {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-titulo {
+  font-family: var(--fontTitulos);
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0 auto 0 0;
+}
+.form-cerrar {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0 0 .3rem;
+  background-image: url(../assets/icons/close.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  cursor: pointer;
+  content: '';
+}

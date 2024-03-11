@@ -1,7 +1,7 @@
 import '../css/TurnControl.css'
 
 // eslint-disable-next-line react/prop-types
-function TurnReset({Reset}) {
+function TurnReset( { Data, UpdateData } ) {
   // const [count, setCount] = useState(0)
   let dblClickTime = 300
   let inTime = false
@@ -10,7 +10,7 @@ function TurnReset({Reset}) {
     if (inTime) {
       inTime = false
       clearTimeout(timeID)
-      Reset()
+      finishCombat()
     } else {
       inTime = true
       timeID = setTimeout(()=>{
@@ -18,6 +18,13 @@ function TurnReset({Reset}) {
       }, dblClickTime)
     }
   }
+  /** Finalizar combate */
+  function finishCombat () {
+    const newData = {...Data}
+    newData.turn = 0
+    newData.inTurn = false
+    UpdateData(newData)
+  }  
 
   return (
     <div className="turn-finish">
