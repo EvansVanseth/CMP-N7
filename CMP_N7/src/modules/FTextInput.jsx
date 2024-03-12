@@ -5,7 +5,7 @@ function FTextInput( { label, text, changeText, bOnlyNumbers = false } ) {
   function onChangeInput (event) {
     changeText(event.target.value)
   }
-  const sOnlyNumbers = (bOnlyNumbers?'numbers':'text')
+  const sOnlyNumbers = (bOnlyNumbers?'number':'text')
 
   return (
     <div className='form-line-group'>
