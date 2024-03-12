@@ -1,37 +1,49 @@
+/* eslint-disable react/prop-types */
+import { useState } from 'react'
+import FormFinishCombat from './FormFinishCombat.jsx'
 import '../css/TurnControl.css'
 
-// eslint-disable-next-line react/prop-types
 function TurnReset( { Data, UpdateData } ) {
-  // const [count, setCount] = useState(0)
-  let dblClickTime = 300
-  let inTime = false
-  let timeID = undefined
-  function oneClick () {
-    if (inTime) {
-      inTime = false
-      clearTimeout(timeID)
-      finishCombat()
-    } else {
-      inTime = true
-      timeID = setTimeout(()=>{
-        inTime = false
-      }, dblClickTime)
-    }
-  }
+   const [showFQ, setShowFQ] = useState(false)
+  /** Codigo para capturar una doble pulsación
+   * 
+   * Se ha anulado y sustituido por un dialogo de SI/NO a petición del cliente
+   */
+  // let dblClickTime = 300
+  // let inTime = false
+  // let timeID = undefined
+  // function oneClick () {
+  //   if (inTime) {
+  //     inTime = false
+  //     clearTimeout(timeID)
+  //     finishCombat()
+  //   } else {
+  //     inTime = true
+  //     timeID = setTimeout(()=>{
+  //       inTime = false
+  //     }, dblClickTime)
+  //   }
+  // }
   /** Finalizar combate */
-  function finishCombat () {
+  function finishCombat () {setShowFQ(true)}  
+  function onClose () {setShowFQ(false)}
+  function onOK () {
     const newData = {...Data}
     newData.turn = 0
     newData.inTurn = false
+    newData.shldValue = Data.shldTotal
+    newData.shldBroke = 0
     UpdateData(newData)
-  }  
+    setShowFQ(false)
+  }
 
   return (
     <div className="turn-finish">
-      <button onClick={oneClick}>
+      <button onClick={finishCombat}>
         TERMINAR COMBATE
       </button>
-      <p>Para finalizar el combate se debe pulsar el botón dos veces seguidas en menos de {dblClickTime/1000} segundos</p>
+      <p>Finalizar el combate reseteará las barreras al 100% y pondrá el contador de turnos a 0</p>
+      {showFQ?<FormFinishCombat onClose={onClose} onOK={onOK}/>:undefined}
     </div>
   )
 }

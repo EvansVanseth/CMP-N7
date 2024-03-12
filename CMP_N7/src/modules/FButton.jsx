@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
 import '../css/FButton.css'
 
-function FButton( { text, onClick } ) {
+function FButton( { keyID, texts, onClicks } ) {
 
   return (
     <div className='form-button-group'>
-      <button className='btn form-button' onClick={onClick}>{text}</button>
+      { texts.map((text, index) => {
+          const localKey = keyID + index
+          return (<button key={localKey} className='btn form-button' onClick={onClicks[index]}>{text}</button>)
+      })}
     </div>  
   )
 }

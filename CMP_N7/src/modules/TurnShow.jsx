@@ -5,6 +5,9 @@ function TurnShow({Data, UpdateData}) {
   /** Iniciar turno */
   function startTurn () {
     const newData = {...Data}
+    if (Data.shldValue > 0) {
+      newData.shldValue = Math.min(Data.shldValue + Data.shldRE, Data.shldTotal)
+    }
     newData.inTurn = true
     newData.turn = Data.turn + 1
     UpdateData(newData)
@@ -12,6 +15,7 @@ function TurnShow({Data, UpdateData}) {
   /** Finalizar turno */
   function finishTurn () {
     const newData = {...Data}
+    if (Data.shldBroke > 0) newData.shldBroke = Data.shldBroke - 1
     newData.inTurn = false
     UpdateData(newData)
   }

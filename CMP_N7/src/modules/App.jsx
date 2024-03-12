@@ -28,7 +28,8 @@ function App() {
     shldValue: 20,
     shldTotal: 20,
     shldBP: 0,
-    shldRE: 2
+    shldRE: 2,
+    shldBroke: 0
   }
   // ESTADOS
   const [data, setData] = useState(loadData(defaultData))

@@ -6,7 +6,7 @@ function FTitle( { caption, closeable = true, closeForm } ) {
 
   return (
     <div className='form-div-titulo'>
-      <p className='form-titulo'>{caption}</p>
+      <h3 className='form-titulo'>{caption}</h3>
       {closeable?<div className='form-cerrar' onClick={closeForm}/>:undefined}
     </div>
   )

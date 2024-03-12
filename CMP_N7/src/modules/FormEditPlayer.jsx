@@ -7,7 +7,7 @@ import FTextInput from './FTextInput.jsx'
 import FButton from './FButton.jsx'
 import { useState } from 'react'
 
-function FormTest({ onClose, Data, UpdateData }) {
+function FormEditPlayer({ onClose, Data, UpdateData }) {
   const [nombreJugador, setNombreJugador] = useState(Data.playerName)
   const [lT, setLT] = useState(Data.lifeTotal)
   const [lR, setLR] = useState(Data.lifeRE)
@@ -32,6 +32,7 @@ function FormTest({ onClose, Data, UpdateData }) {
     newData.shldRE = sR
     newData.shldBP = sB
     UpdateData(newData)
+    onClose()
   }
 
   return (
@@ -53,9 +54,9 @@ function FormTest({ onClose, Data, UpdateData }) {
       <FTextInput label='BLINDAJE' text={lB} changeText={onCLB} bOnlyNumbers={true}/>
       <FText caption='Datos sobre la salud de tu personaje' />
       <hr/>
-      <FButton text='APLICAR' onClick={onOK} />
+      <FButton texts={['ACEPTAR']} onClicks={[onOK]} />
     </Form>
   )
 }
 
-export default FormTest
+export default FormEditPlayer

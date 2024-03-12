@@ -1,0 +1,17 @@
+.tupla-broked-shld {
+  display: flex;
+  justify-content: space-evenly;
+  border: .2rem solid var(--colorPri);
+  border-radius: 1rem;
+  padding: .2rem .1rem;
+  min-width: 8rem;
+  margin-left: .4rem;
+}
+
+.activable {
+  border-color: var(--colorShld090);
+}
+
+.btn-disabled {
+  background-color: var(--colorTer);
+}

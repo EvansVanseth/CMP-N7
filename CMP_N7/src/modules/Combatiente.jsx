@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import Marc from './Marc.jsx'
 import Tupla from './Tupla.jsx'
+import BrokedShields from './BrokedShields.jsx'
 
 import iconVida from '../assets/life.svg'
 import iconEscu from '../assets/shield.svg'
@@ -17,6 +18,7 @@ function Combatiente( { Data, UpdateData, onClickTitle } ) {
   /** Reducir vida */
   function lifeDn () {
     const newData = {...Data}
+    if (Data.shldValue===0) newData.shldBroke = 2
     newData.lifeValue = Math.max(Data.lifeValue - 1, -10)
     UpdateData(newData)  
   }
@@ -29,6 +31,9 @@ function Combatiente( { Data, UpdateData, onClickTitle } ) {
   /** Reducir escudos */
   function shldDn () {
     const newData = {...Data}
+    if (Data.shldValue === 1) {
+      newData.shldBroke = 2;
+    }
     newData.shldValue = Math.max(Data.shldValue - 1, 0)
     UpdateData(newData)
   }
@@ -37,11 +42,16 @@ function Combatiente( { Data, UpdateData, onClickTitle } ) {
     <Marc Title='COMBATIENTE:' 
           Jugador= {{ nombre: Data.playerName,
                       editar: onClickTitle }} >
-      <Tupla valor={Data.shldValue} total={Data.shldTotal}
-              bp={Data.shldBP} re={Data.shldRE} blifeShld={true}
-              btnUp={shldUp} btnDn={shldDn}
-              icon = {{ alt: 'icono-escu',
-              src: iconEscu }} />
+      {Data.shldValue===0?
+        <BrokedShields Data={Data} UpdateData={UpdateData}
+                       icon = {{ alt: 'icono-escu',
+                                 src: iconEscu }}/>:
+        <Tupla valor={Data.shldValue} total={Data.shldTotal}
+                      bp={Data.shldBP} re={Data.shldRE} blifeShld={true}
+                      btnUp={shldUp} btnDn={shldDn}
+                      icon = {{ alt: 'icono-escu',
+                                src: iconEscu }} />
+      }
       <Tupla valor={Data.lifeValue} total={Data.lifeTotal}
               bp={Data.lifeBP} re={Data.lifeRE}
               btnUp={lifeUp} btnDn={lifeDn}
