@@ -7,3 +7,7 @@ export function loadData (defaultData) {
 export function saveData (Data) {
   window.localStorage.setItem('cmp-data', JSON.stringify(Data))
 }
+
+export function resetData () {
+  window.localStorage.removeItem('cmp-data')
+}

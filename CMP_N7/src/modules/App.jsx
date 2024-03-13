@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { defaultData } from '../initialData.js'
 import { loadData, saveData} from '../keepStates.js'
 // Modulos
 import Cabecera from './Cabecera.jsx'
@@ -16,25 +17,6 @@ import iconArmas from '../assets/gun.svg'
 
 
 function App() {
-  // valores por defecto de la aplicación
-  const defaultData = {
-    turn: 0,
-    inTurn: false,
-    playerName: 'Jugador',
-    lifeValue: 20,
-    lifeTotal: 20,
-    lifeBP: 0,
-    lifeRE: 0,
-    shldValue: 20,
-    shldTotal: 20,
-    shldBP: 0,
-    shldRE: 2,
-    shldBroke: 0,
-    rcPIndex: -1,
-    rcPTurns: 0,
-    powers: [],
-    guns: []
-  }
   // ESTADOS
   const [data, setData] = useState(loadData(defaultData))
   const [showFormPlayer, setShowFormPlayer] = useState(false)

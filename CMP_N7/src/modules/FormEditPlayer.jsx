@@ -1,13 +1,17 @@
 /* eslint-disable react/prop-types */
+import { defaultData } from '../initialData.js'
+import { resetData } from '../keepStates.js'
 import Form from './Form.jsx'
 import FTitle from './FTitle.jsx'
 import FSection from './FSection.jsx'
 import FText from './FText.jsx'
 import FTextInput from './FTextInput.jsx'
 import FButton from './FButton.jsx'
+import FormInitialData from './FormInitialData.jsx'
 import { useState } from 'react'
 
 function FormEditPlayer({ onClose, Data, UpdateData }) {
+  const [showFID, setShowFID] = useState (false)
   const [nombreJugador, setNombreJugador] = useState(Data.playerName)
   const [lT, setLT] = useState(Data.lifeTotal)
   const [lR, setLR] = useState(Data.lifeRE)
@@ -34,6 +38,13 @@ function FormEditPlayer({ onClose, Data, UpdateData }) {
     UpdateData(newData)
     onClose()
   }
+  function onInitData () { setShowFID(true) }
+  function onCloseInitData () { setShowFID(false) }
+  function onOkInitData () { 
+    resetData()
+    UpdateData(defaultData)
+    setShowFID(false) 
+  }
 
   return (
     <Form>
@@ -48,6 +59,11 @@ function FormEditPlayer({ onClose, Data, UpdateData }) {
       <FTextInput label='Regeneración (RE)' text={lR} changeText={onCLR} bOnlyNumbers={true}/>
       <FTextInput label='Blindaje (BP))' text={lB} changeText={onCLB} bOnlyNumbers={true}/>
       <FButton texts={['ACEPTAR']} onClicks={[onOK]} />
+      <hr />
+      <FSection caption='Restaurar datos de fabrica' closeable={false} />
+      <FText caption='Este botón eliminará todos los datos almacenados en el dispositivo para esta aplicación. Utiliza esta accion solamente en caso de que la aplicación no funcione correctamente. Deberás volver a introducir toda tu información de personaje. Esta acción no puede deshacerse.' />
+      <FButton texts={['RESTAURAR DATOS']} onClicks={[onInitData]}/>  
+      {showFID?<FormInitialData onClose={onCloseInitData} onOK={onOkInitData}/>:undefined}    
     </Form>
   )
 }
