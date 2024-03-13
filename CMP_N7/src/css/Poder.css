@@ -1,0 +1,46 @@
+.poder-mark {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 1rem 1.5rem .5rem 1.5rem;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.poder-nombre {
+  margin: 0;
+  text-align: right;
+}
+
+.poder-recarga {
+  margin: 0;
+  margin-left: .4rem;
+  border: .2rem solid var(--colorPri);
+  border-radius: .7rem;
+  width: 3rem;
+  text-align: center;
+}
+
+.poder-btn-activar {
+  margin: 0;
+  margin-left: .4rem;
+  border: .2rem solid var(--colorPri);
+  border-radius: .7rem;
+  background-color: var(--colorPri);
+  color: var(--colorSec);
+  text-align: center;
+}
+
+.poder-disabled {
+  opacity: .3;
+}
+
+.poder-activo-nombre {
+  color: var(--colorActived);
+  text-transform: uppercase;
+}
+.poder-activo-recarga {
+  border-color: var(--colorActived);
+  text-transform: uppercase;
+  background: white
+}

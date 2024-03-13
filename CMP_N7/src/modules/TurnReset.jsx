@@ -33,6 +33,8 @@ function TurnReset( { Data, UpdateData } ) {
     newData.inTurn = false
     newData.shldValue = Data.shldTotal
     newData.shldBroke = 0
+    newData.rcPIndex = -1
+    newData.rcPTurns = 0
     UpdateData(newData)
     setShowFQ(false)
   }

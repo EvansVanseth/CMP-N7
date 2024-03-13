@@ -37,23 +37,16 @@ function FormEditPlayer({ onClose, Data, UpdateData }) {
 
   return (
     <Form>
-      <FTitle caption='COMBATIENTE' closeForm={onClose}/>
-      <FSection caption='PRESENTACIÓN' />
-      <FTextInput label='NOMBRE' text={nombreJugador} changeText={onNameChange} />
-      <FText caption='Escribe aquí el nombre de tu personaje' />
-      <hr/>
-      <FSection caption='ESCUDOS' />
-      <FTextInput label='TOTAL' text={sT} changeText={onCST} bOnlyNumbers={true}/>
-      <FTextInput label='REGENERACION' text={sR} changeText={onCSR} bOnlyNumbers={true}/>
-      <FTextInput label='BLINDAJE' text={sB} changeText={onCSB} bOnlyNumbers={true}/>
-      <FText caption='Datos sobre los escudos de tu personaje' />
-      <hr/>
-      <FSection caption='SALUD' />
-      <FTextInput label='TOTAL' text={lT} changeText={onCLT} bOnlyNumbers={true}/>
-      <FTextInput label='REGENERACION' text={lR} changeText={onCLR} bOnlyNumbers={true}/>
-      <FTextInput label='BLINDAJE' text={lB} changeText={onCLB} bOnlyNumbers={true}/>
-      <FText caption='Datos sobre la salud de tu personaje' />
-      <hr/>
+      <FTitle caption='Combatiente' closeForm={onClose}/>
+      <FTextInput label='Nombre' text={nombreJugador} changeText={onNameChange} />
+      <FSection caption='Escudos' />
+      <FTextInput label='Total (SH)' text={sT} changeText={onCST} bOnlyNumbers={true}/>
+      <FTextInput label='Regeneración (RE)' text={sR} changeText={onCSR} bOnlyNumbers={true}/>
+      <FTextInput label='Blindaje (BP)' text={sB} changeText={onCSB} bOnlyNumbers={true}/>
+      <FSection caption='Salud' />
+      <FTextInput label='Total (PG)' text={lT} changeText={onCLT} bOnlyNumbers={true}/>
+      <FTextInput label='Regeneración (RE)' text={lR} changeText={onCLR} bOnlyNumbers={true}/>
+      <FTextInput label='Blindaje (BP))' text={lB} changeText={onCLB} bOnlyNumbers={true}/>
       <FButton texts={['ACEPTAR']} onClicks={[onOK]} />
     </Form>
   )

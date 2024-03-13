@@ -10,6 +10,8 @@ function TurnShow({Data, UpdateData}) {
     }
     newData.inTurn = true
     newData.turn = Data.turn + 1
+    if (newData.rcPTurns>0) newData.rcPTurns--
+    if (newData.rcPTurns===0) newData.rcPIndex=-1
     UpdateData(newData)
   }
   /** Finalizar turno */

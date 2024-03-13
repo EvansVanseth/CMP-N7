@@ -39,7 +39,7 @@ function Combatiente( { Data, UpdateData, onClickTitle } ) {
   }
 
   return (
-    <Marc Title='COMBATIENTE:' 
+    <Marc Title='COMBATIENTE' 
           Jugador= {{ nombre: Data.playerName,
                       editar: onClickTitle }} >
       {Data.shldValue===0?

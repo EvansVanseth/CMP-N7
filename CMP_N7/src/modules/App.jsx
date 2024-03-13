@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import { loadData, saveData } from '../keepStates.js'
+import { loadData, saveData} from '../keepStates.js'
 // Modulos
 import Cabecera from './Cabecera.jsx'
 import TurnShow from './TurnShow.jsx'
 import Combatiente from './Combatiente.jsx'
 import Marc from './Marc.jsx'
+import Poderes from './Poderes.jsx'
 import FormEditPlayer from './FormEditPlayer.jsx'
 import Pie from './Pie.jsx'
 import TurnReset from './TurnReset.jsx'
 // CSS
 import '../css/App.css'
 // imagenes
-import iconPoderes from '../assets/poderes.svg'
 import iconArmas from '../assets/gun.svg'
 
 
@@ -29,7 +29,11 @@ function App() {
     shldTotal: 20,
     shldBP: 0,
     shldRE: 2,
-    shldBroke: 0
+    shldBroke: 0,
+    rcPIndex: -1,
+    rcPTurns: 0,
+    powers: [],
+    guns: []
   }
   // ESTADOS
   const [data, setData] = useState(loadData(defaultData))
@@ -51,11 +55,7 @@ function App() {
       <div className='contenedor'>
         <TurnShow Data={data} UpdateData={updateData} />
         <Combatiente Data={data} UpdateData={updateData} onClickTitle={openFormPlayer}/>
-        <Marc Title='PODERES' 
-              Logo= {{ alt: 'icono-poderes',
-                       src: iconPoderes }} 
-              Boton= {{ text: '+',
-                        action: undefined }} />
+        <Poderes Data={data} UpdateData={updateData}/>
         <Marc Title='ARMAS' 
               Logo= {{ alt: 'icono-armas',
                        src: iconArmas }} 

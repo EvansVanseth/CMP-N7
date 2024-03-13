@@ -21,6 +21,7 @@
   --colorShld005: #000985; 
   --colorShld000: #000000; 
   --colorBlinded: #ff9f32;
+  --colorActived: #be3c15;
 }
 /* Imprescindibles */
 html {
@@ -34,8 +35,8 @@ html {
 }
 body {
   font-family: var(--fontGeneral);
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-size: 1.0rem;
+  line-height: 1.2;
   margin-bottom: 8rem;
 }
 @media (max-width: 750px) {
