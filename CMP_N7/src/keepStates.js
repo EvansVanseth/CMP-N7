@@ -1,7 +1,11 @@
+import { fillDataLost } from "./initialData"
+
 /** Data State Manipulation */
 export function loadData (defaultData) {
   const LocalData = window.localStorage.getItem('cmp-data')
-  if (LocalData) return JSON.parse(LocalData)
+  if (LocalData) {
+    return fillDataLost(JSON.parse(LocalData))
+  }
   else return defaultData
 }
 export function saveData (Data) {

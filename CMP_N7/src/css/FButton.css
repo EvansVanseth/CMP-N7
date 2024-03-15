@@ -13,3 +13,7 @@
   background-color: var(--colorTer);
   color: var(--colorPri)
 }
+
+.form-button-disabled {
+  opacity: .3;
+}

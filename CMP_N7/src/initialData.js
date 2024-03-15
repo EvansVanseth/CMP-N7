@@ -17,3 +17,23 @@
     powers: [],
     guns: []
   }
+
+  export function fillDataLost(data) {
+    if (data.turn===undefined) data.turn = defaultData.turn
+    if (data.inTurn===undefined) data.inTurn = defaultData.inTurn
+    if (data.playerName===undefined) data.playerName = defaultData.playerName
+    if (data.lifeValue===undefined) data.lifeValue = defaultData.lifeValue
+    if (data.lifeTotal===undefined) data.lifeTotal = defaultData.lifeTotal
+    if (data.lifeBP===undefined) data.lifeBP = defaultData.lifeBP
+    if (data.lifeRE===undefined) data.lifeRE = defaultData.lifeRE
+    if (data.shldValue===undefined) data.shldValue = defaultData.shldValue
+    if (data.shldTotal===undefined) data.shldTotal = defaultData.shldTotal
+    if (data.shldBP===undefined) data.shldBP = defaultData.shldBP
+    if (data.shldRE===undefined) data.shldRE = defaultData.shldRE
+    if (data.shldBroke===undefined) data.shldBroke = defaultData.shldBroke
+    if (data.rcPIndex===undefined) data.rcPIndex = defaultData.rcPIndex
+    if (data.rcPTurns===undefined) data.rcPTurns = defaultData.rcPTurns
+    if (data.powers===undefined) data.powers = defaultData.powers
+    if (data.guns===undefined) data.guns = defaultData.guns
+    return data
+  }

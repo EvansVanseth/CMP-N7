@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
-import FormFinishCombat from './FormFinishCombat.jsx'
+import FormQuestion from './FormQuestion.jsx'
 import '../css/TurnControl.css'
 
 function TurnReset( { Data, UpdateData } ) {
@@ -45,7 +45,9 @@ function TurnReset( { Data, UpdateData } ) {
         TERMINAR COMBATE
       </button>
       <p>Finalizar el combate reseteará las barreras al 100% y pondrá el contador de turnos a 0</p>
-      {showFQ?<FormFinishCombat onClose={onClose} onOK={onOK}/>:undefined}
+      {showFQ?<FormQuestion title='Terminar combate'
+            question='¿Estas seguro/a que quieres terminar el combate?'
+            onClose={onClose} onOK={onOK}/>:undefined}
     </div>
   )
 }
