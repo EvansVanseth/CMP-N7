@@ -12,7 +12,7 @@ function Combatiente( { Data, UpdateData, onClickTitle } ) {
   /** Aumentar vida */
   function lifeUp () {
     const newData = {...Data}
-    newData.lifeValue = Data.lifeValue + 1
+    newData.lifeValue = Math.min(Data.lifeValue + 1, Data.lifeTotal)
     UpdateData(newData)   
   }
   /** Reducir vida */
@@ -25,7 +25,7 @@ function Combatiente( { Data, UpdateData, onClickTitle } ) {
   /** Aumentar escudos */
   function shldUp () {
     const newData = {...Data}
-    newData.shldValue = Data.shldValue + 1
+    newData.shldValue = Math.min(Data.shldValue + 1, Data.shldTotal)
     UpdateData(newData) 
   }
   /** Reducir escudos */

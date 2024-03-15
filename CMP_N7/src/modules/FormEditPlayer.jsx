@@ -31,9 +31,11 @@ function FormEditPlayer({ onClose, Data, UpdateData }) {
     const newData = {...Data}
     newData.playerName = nombreJugador
     newData.lifeTotal = lT
+    if (Data.lifeValue === Data.lifeTotal) newData.lifeValue = lT
     newData.lifeRE = lR
     newData.lifeBP = lB
     newData.shldTotal = sT
+    if (Data.shldValue === Data.shldTotal) newData.shldValue = sT
     newData.shldRE = sR
     newData.shldBP = sB
     UpdateData(newData)

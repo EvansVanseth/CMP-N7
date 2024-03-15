@@ -1,0 +1,9 @@
+.form-select {
+  color: var(--colorPri);
+  border: .2rem solid var(--colorPri);
+  border-radius: .5rem;
+  padding: .5rem;
+  text-align: right;
+  background-color: var(--colorSec);
+  width: 50%;
+}

@@ -14,6 +14,8 @@ function Arma ({ oArma, idxArma, onEdit, Data, UpdateData }) {
   const classNombre = 'arma-name ' + (oArma.balas>0?'':'arma-disabled')
   const classBalas  = 'arma-balas ' + (oArma.balas>0?'':'arma-disabled')
   const classBtn    = 'btn arma-btn ' + (oArma.balas>0?'':'arma-disabled')
+  const classRec    = 'btn arma-btn ' + 
+          (Data.numCarga===0 && oArma.balas===0?'arma-disabled':'')
   
   const [showFQ, setShowFQ] = useState(false)
 
@@ -33,21 +35,29 @@ function Arma ({ oArma, idxArma, onEdit, Data, UpdateData }) {
   }
   function onRecharge (){ setShowFQ(true) }
   function onCloseFQ (){ setShowFQ(false) }
-  function onOKFQ (){ setShowFQ(false) }
+  function onOKFQ (){ 
+    const newData = {...Data}
+    if (Data.numCarga>0)
+      newData.guns[idxArma].balas = Data.guns[idxArma].cargador
+    newData.numCarga = Math.max(Data.numCarga - 1, 0)
+    UpdateData(newData)
+    setShowFQ(false) 
+  }
   return (
     <>
       <div className={'arma-mark'}>
         <p className={classNombre} onClick={onEditArma}>{Data.guns[idxArma].nombre}</p>
         <div className={classBalas}>{Data.guns[idxArma].balas}</div>
         <button className={classBtn} onClick={oArma.balas>0?onUp:undefined}>+</button>
-        <button className='btn arma-btn' 
-                onClick={oArma.balas>0?onDn:onRecharge}>
+        <button className={classRec} 
+                onClick={oArma.balas>0?onDn:
+                         Data.numCarga>0?onRecharge:undefined}>
                   {oArma.balas>0?'Disparar':'RECARGAR'}</button>
       {showFQ?<FormQuestion title='Recargar'
               question='¿Estas seguro/a que quieres recargar el arma?'
               onClose={onCloseFQ} onOK={onOKFQ}/>:undefined}
       </div>
-      <div className='arma-recarga'>Recarga: <span>Movimiento</span></div>
+      <div className='arma-recarga'>Recarga: <span>{oArma.recarga}</span></div>
     </>
   )
 }
