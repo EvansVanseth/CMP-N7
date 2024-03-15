@@ -18,7 +18,7 @@ function FormPoder ({ onClose, oPoder, poderIndex, Data, UpdateData }) {
   const [nombrePoder, setNombrePoder] = useState(sNombre)
   const [recargaPoder, setRecargaPoder] = useState(sRecarga)
   function onNombreChange (newText) { setNombrePoder(newText) }
-  function onRecargaChange (newText) { setRecargaPoder(newText) }
+  function onRecargaChange (newText) { setRecargaPoder(parseInt(newText)) }
 
   function onOK () {
     if(nombrePoder==='' || recargaPoder==='') return;

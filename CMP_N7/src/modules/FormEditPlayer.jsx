@@ -21,12 +21,12 @@ function FormEditPlayer({ onClose, Data, UpdateData }) {
   const [sR, setSR] = useState(Data.shldRE)
   const [sB, setSB] = useState(Data.shldBP)
   function onNameChange (newText) { setNombreJugador(newText) }
-  function onCLT (newText) { setLT(newText) }
-  function onCLR (newText) { setLR(newText) }
-  function onCLB (newText) { setLB(newText) }
-  function onCST (newText) { setST(newText) }
-  function onCSR (newText) { setSR(newText) }
-  function onCSB (newText) { setSB(newText) }
+  function onCLT (newText) { setLT(parseInt(newText)) }
+  function onCLR (newText) { setLR(parseInt(newText)) }
+  function onCLB (newText) { setLB(parseInt(newText)) }
+  function onCST (newText) { setST(parseInt(newText)) }
+  function onCSR (newText) { setSR(parseInt(newText)) }
+  function onCSB (newText) { setSB(parseInt(newText)) }
   function onOK () {
     const newData = {...Data}
     newData.playerName = nombreJugador

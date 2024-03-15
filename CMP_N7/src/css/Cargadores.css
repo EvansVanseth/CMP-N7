@@ -1,0 +1,17 @@
+.cargadores-mark {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: .2rem dashed var(--colorPri);
+  margin: 0 2rem 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cargadores-cantidad {
+  border: .2rem solid var(--colorPri);
+  border-radius: .7rem;
+  width: 4rem;
+  text-align: center;
+  padding: .3rem;
+}

@@ -1,18 +1,18 @@
-.poder-mark {
+.arma-mark {
   display: flex;
   align-items: center;
   justify-content: end;
-  margin: 1rem 1.5rem;
+  margin: 0 1.5rem;
   font-weight: 900;
   font-size: 1.4rem;
 }
 
-.poder-nombre {
+.arma-name {
   margin: 0;
   text-align: right;
 }
 
-.poder-recarga {
+.arma-balas {
   margin: 0;
   margin-left: .4rem;
   border: .2rem solid var(--colorPri);
@@ -22,20 +22,20 @@
   padding: .3rem;
 }
 
-.poder-btn {
+.arma-btn {
   margin-left: .4rem;
 }
 
-.poder-disabled {
-  opacity: .3;
+.arma-recarga {
+  font-size: 1.4rem;
+  text-align: right;  
+  margin: .2rem 1.5rem 1rem 1.5rem;
 }
 
-.poder-activo-nombre {
-  color: var(--colorActived);
-  text-transform: uppercase;
+.arma-recarga span {
+  font-weight: 900;
 }
-.poder-activo-recarga {
-  border-color: var(--colorActived);
-  text-transform: uppercase;
-  background: white
+
+.arma-disabled {
+  opacity: .3;
 }

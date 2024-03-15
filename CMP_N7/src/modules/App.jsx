@@ -5,15 +5,14 @@ import { loadData, saveData} from '../keepStates.js'
 import Cabecera from './Cabecera.jsx'
 import TurnShow from './TurnShow.jsx'
 import Combatiente from './Combatiente.jsx'
-import Marc from './Marc.jsx'
 import Poderes from './Poderes.jsx'
+import Armas from './Armas.jsx'
 import FormEditPlayer from './FormEditPlayer.jsx'
 import Pie from './Pie.jsx'
 import TurnReset from './TurnReset.jsx'
 // CSS
 import '../css/App.css'
 // imagenes
-import iconArmas from '../assets/gun.svg'
 
 
 function App() {
@@ -38,11 +37,7 @@ function App() {
         <TurnShow Data={data} UpdateData={updateData} />
         <Combatiente Data={data} UpdateData={updateData} onClickTitle={openFormPlayer}/>
         <Poderes Data={data} UpdateData={updateData}/>
-        <Marc Title='ARMAS' 
-              Logo= {{ alt: 'icono-armas',
-                       src: iconArmas }} 
-              Boton= {{ text: '+',
-                        action: undefined }} />                        
+        <Armas Data={data} UpdateData={updateData} />
         <TurnReset Data={data} UpdateData={updateData} />
       </div>
       <Pie />

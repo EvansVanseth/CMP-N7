@@ -8,6 +8,7 @@ function TurnShow({Data, UpdateData}) {
     if (Data.shldValue > 0) {
       newData.shldValue = Math.min(Data.shldValue + Data.shldRE, Data.shldTotal)
     }
+    newData.lifeValue = Math.min(Data.lifeValue + Data.lifeRE, Data.lifeTotal)
     newData.inTurn = true
     newData.turn = Data.turn + 1
     if (newData.rcPTurns>0) newData.rcPTurns--
