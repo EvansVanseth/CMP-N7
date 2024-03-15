@@ -77,7 +77,7 @@ function FormEditPlayer({ onClose, Data, UpdateData }) {
       <FSection caption='Salud' />
       <FTextInput label='Total (PG)' text={lT} changeText={onCLT} bOnlyNumbers={true}/>
       <FTextInput label='Regeneración (RE)' text={lR} changeText={onCLR} bOnlyNumbers={true}/>
-      <FTextInput label='Blindaje (BP))' text={lB} changeText={onCLB} bOnlyNumbers={true}/>
+      <FTextInput label='Blindaje (BP)' text={lB} changeText={onCLB} bOnlyNumbers={true}/>
       <FButton texts={['ACEPTAR']} onClicks={[onOK]} />
       <hr />
       <FSection caption='Restaurar datos de fabrica' closeable={false} />
