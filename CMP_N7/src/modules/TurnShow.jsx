@@ -24,14 +24,14 @@ function TurnShow({Data, UpdateData}) {
 
   return (
     <div className="turn-control">
-      <button className={Data.inTurn?'tc-btn-disabled':''}
+      <button className={Data.inTurn?'btn tc-btn-disabled':'btn'}
               onClick={!Data.inTurn?startTurn:undefined}>
         EMPEZAR
       </button>
       <div>
         TURNO: <span>{Data.turn}</span>
       </div>
-      <button className={!Data.inTurn?'tc-btn-disabled':''}
+      <button className={!Data.inTurn?'btn tc-btn-disabled':'btn'}
               onClick={Data.inTurn?finishTurn:undefined}>
         TERMINAR
       </button>

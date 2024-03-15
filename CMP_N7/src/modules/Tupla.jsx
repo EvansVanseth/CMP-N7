@@ -39,8 +39,8 @@ function Tupla( { icon, valor, total, bp, re, btnUp, btnDn, blifeShld = false} )
           <div className='tupla-total'>{total}</div>
         </div>
       </div>
-      <button className='tupla-boton' onClick={btnDn}>-</button>
-      <button className='tupla-boton' onClick={btnUp}>+</button>
+      <button className='btn' onClick={btnDn}>-</button>
+      <button className='btn' onClick={btnUp}>+</button>
       <div className='tupla-info'>
         <div className={shieldsOk}>
           <p className='tupla-text'>RE</p>

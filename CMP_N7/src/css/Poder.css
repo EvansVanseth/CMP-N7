@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  margin: 1rem 1.5rem .5rem 1.5rem;
+  margin: 1rem 1.5rem;
   font-weight: 900;
   font-size: 1.4rem;
 }
@@ -19,16 +19,17 @@
   border-radius: .7rem;
   width: 3rem;
   text-align: center;
+  padding: .3rem;
 }
 
-.poder-btn-activar {
-  margin: 0;
+.poder-btn {
+  /* margin: 0; */
   margin-left: .4rem;
-  border: .2rem solid var(--colorPri);
+  /* border: .2rem solid var(--colorPri);
   border-radius: .7rem;
   background-color: var(--colorPri);
   color: var(--colorSec);
-  text-align: center;
+  text-align: center; */
 }
 
 .poder-disabled {

@@ -3,7 +3,7 @@ import '../css/BrokedShields.css'
 
 function BrokedShields ({ icon, Data, UpdateData}) {
   const colorActivacion = (Data.shldBroke===0?'tupla-broked-shld activable':'tupla-broked-shld')
-  const btnEnabled = (Data.inTurn && Data.shldBroke===0?'tupla-boton':'tupla-boton btn-disabled')
+  const btnEnabled = (Data.inTurn && Data.shldBroke===0?'btn':'btn btn-disabled')
   function onActive (){
     if (Data.shldBroke > 0 || !Data.inTurn) return
     const newData = {...Data}

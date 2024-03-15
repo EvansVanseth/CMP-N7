@@ -53,16 +53,7 @@
   margin-left: 1rem;
 }
 .mark-btn {
-  font-weight: bold;
-  /* min-width: 4rem; */
-  margin: 0 auto; 
   margin-left: 1rem;
-  color: var(--colorSec);
-  background-color: var(--colorPri);
-}
-.mark-btn:hover {
-  color: var(--colorPri);
-  background-color: var(--colorTer);
 }
 .mark-player {
   margin: 0 0 0 1rem;

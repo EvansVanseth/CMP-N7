@@ -100,4 +100,14 @@ hr {
   border: .2rem solid var(--colorPri);
   border-radius: .5rem;
   padding: .3rem 1rem;
+  color: var(--colorSec);
+  background-color: var(--colorPri);
+}
+.btn-disabled {
+  background-color: var(--colorTer);
+}
+.btn:active {
+  transform: scale(0.95);
+  color: var(--colorPri);
+  background-color: var(--colorTer);
 }

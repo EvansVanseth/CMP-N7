@@ -11,13 +11,6 @@
   font-weight: 700;
 }
 
-.turn-control button {
-  border: .2rem solid var(--colorPri);  
-  border-radius: .5rem;
-  color: var(--colorSec);
-  background-color: var(--colorPri);
-}
-
 .turn-control .tc-btn-disabled {
   background-color: var(--colorTer);
 }
@@ -34,13 +27,6 @@
   background-color: var(--colorSec);
   font-size: 1.6rem;
   font-weight: 700;
-}
-
-.turn-finish button {
-  border: .2rem solid var(--colorPri);  
-  border-radius: .5rem;
-  color: var(--colorSec);
-  background-color: var(--colorPri);
 }
 
 .turn-finish p {

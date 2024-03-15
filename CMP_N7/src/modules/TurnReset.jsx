@@ -41,7 +41,7 @@ function TurnReset( { Data, UpdateData } ) {
 
   return (
     <div className="turn-finish">
-      <button onClick={finishCombat}>
+      <button className='btn' onClick={finishCombat}>
         TERMINAR COMBATE
       </button>
       <p>Finalizar el combate reseteará las barreras al 100% y pondrá el contador de turnos a 0</p>
