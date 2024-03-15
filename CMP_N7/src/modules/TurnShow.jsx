@@ -11,8 +11,9 @@ function TurnShow({Data, UpdateData}) {
     newData.lifeValue = Math.min(Data.lifeValue + Data.lifeRE, Data.lifeTotal)
     newData.inTurn = true
     newData.turn = Data.turn + 1
-    if (newData.rcPTurns>0) newData.rcPTurns--
-    if (newData.rcPTurns===0) newData.rcPIndex=-1
+    if (newData.rcPTurns > 0 && !Data.rcPFirst) newData.rcPTurns--
+    if (newData.rcPTurns===0) newData.rcPIndex = -1
+    if (Data.rcPFirst) newData.rcPFirst = false
     UpdateData(newData)
   }
   /** Finalizar turno */

@@ -14,6 +14,7 @@
     shldBroke: 0,
     rcPIndex: -1,
     rcPTurns: 0,
+    rcPFirst: false,
     numCarga: 0,
     powers: [],
     guns: []
@@ -34,6 +35,7 @@
     if (data.shldBroke===undefined) data.shldBroke = defaultData.shldBroke
     if (data.rcPIndex===undefined) data.rcPIndex = defaultData.rcPIndex
     if (data.rcPTurns===undefined) data.rcPTurns = defaultData.rcPTurns
+    if (data.rcPFirst===undefined) data.rcPFirst = defaultData.rcPFirst
     if (data.numCarga===undefined) data.numCarga = defaultData.numCarga
     if (data.powers===undefined) data.powers = defaultData.powers
     if (data.guns===undefined) data.guns = defaultData.guns

@@ -26,6 +26,7 @@ function Poderes ({Data, UpdateData}) {
     const newData = {...Data}
     newData.rcPIndex = indice
     newData.rcPTurns = poder.recarga
+    newData.rcPFirst = true
     UpdateData(newData)
   }
   function onCloseFP() { setShowFPoder(false); }
