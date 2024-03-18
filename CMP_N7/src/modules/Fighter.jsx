@@ -11,9 +11,10 @@ import Pie from './Pie.jsx'
 import TurnReset from './TurnReset.jsx'
 // CSS
 import '../css/App.css'
+import ChangeFighter from './ChangeFighter.jsx'
 // imagenes
 
-function Fighter({data, updateData}) {
+function Fighter({data, updateData, updateSelFighter}) {
   // ESTADOS
   const [showFormPlayer, setShowFormPlayer] = useState(false)
   // Cierre de formularios
@@ -32,6 +33,7 @@ function Fighter({data, updateData}) {
         <Poderes Data={data} UpdateData={updateData}/>
         <Armas Data={data} UpdateData={updateData} />
         <TurnReset Data={data} UpdateData={updateData} />
+        <ChangeFighter updateSelFighter={updateSelFighter} />
       </div>
       <Pie />
       {showFormPlayer?<FormEditPlayer onClose={closeFormPlayer} 

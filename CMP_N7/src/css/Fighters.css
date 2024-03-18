@@ -1,0 +1,16 @@
+.fighter-mark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 1rem;
+  padding: .2rem;
+  border: .1rem dashed var(--colorPri);
+  border-radius: .5rem;
+  background-color: var(--colorTer);
+  border-style: solid;
+}
+.fighter-name {
+  font-weight: bold;
+  width: 100%;
+  margin: 0 1rem;
+}

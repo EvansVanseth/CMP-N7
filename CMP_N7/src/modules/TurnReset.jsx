@@ -5,25 +5,6 @@ import '../css/TurnControl.css'
 
 function TurnReset( { Data, UpdateData } ) {
    const [showFQ, setShowFQ] = useState(false)
-  /** Codigo para capturar una doble pulsación
-   * 
-   * Se ha anulado y sustituido por un dialogo de SI/NO a petición del cliente
-   */
-  // let dblClickTime = 300
-  // let inTime = false
-  // let timeID = undefined
-  // function oneClick () {
-  //   if (inTime) {
-  //     inTime = false
-  //     clearTimeout(timeID)
-  //     finishCombat()
-  //   } else {
-  //     inTime = true
-  //     timeID = setTimeout(()=>{
-  //       inTime = false
-  //     }, dblClickTime)
-  //   }
-  // }
   /** Finalizar combate */
   function finishCombat () {setShowFQ(true)}  
   function onClose () {setShowFQ(false)}

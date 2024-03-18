@@ -10,7 +10,7 @@ export function loadAppData (defaultAppData) {
   }
   else if (LocalData) {
     const newLocalAppData = {
-      selected: 0,
+      selected: -1,
       fighters: [fillDataLost(JSON.parse(LocalData))] 
     }
     return newLocalAppData
