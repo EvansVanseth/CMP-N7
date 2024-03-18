@@ -5,7 +5,7 @@ function Pie() {
 
   return (
     <footer>
-      <p>Designed and programmed by<a href="https://github.com/EvansVanseth" target="_blank" >EvansVanseth</a></p>
+      <p>Designed & programmed by<a href="https://github.com/EvansVanseth" target="_blank" >EvansVanseth</a> (v2.0)</p>
     </footer>
   )
 }
