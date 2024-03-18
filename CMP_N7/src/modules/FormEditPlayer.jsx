@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { defaultData } from '../initialData.js'
-import { resetData } from '../keepStates.js'
 import Form from './Form.jsx'
 import FTitle from './FTitle.jsx'
 import FSection from './FSection.jsx'
@@ -45,7 +44,6 @@ function FormEditPlayer({ onClose, Data, UpdateData }) {
   function onInitData () { setShowFID(true) }
   function onCloseInitData () { setShowFID(false) }
   function onOkInitData () { 
-    resetData()
     UpdateData(defaultData)
     setShowFID(false) 
   }

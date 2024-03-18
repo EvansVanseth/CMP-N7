@@ -1,4 +1,4 @@
-  // valores por defecto de la aplicación
+  // Valores por defecto del jugador
   export const defaultData = {
     turn: 0,
     inTurn: false,
@@ -21,6 +21,7 @@
   }
 
   export function fillDataLost(data) {
+    if (data===undefined) return defaultData
     if (data.turn===undefined) data.turn = defaultData.turn
     if (data.inTurn===undefined) data.inTurn = defaultData.inTurn
     if (data.playerName===undefined) data.playerName = defaultData.playerName
@@ -40,4 +41,16 @@
     if (data.powers===undefined) data.powers = defaultData.powers
     if (data.guns===undefined) data.guns = defaultData.guns
     return data
+  }
+
+  // valores por defecto de la aplicación
+  export const defaultAppData = {
+    selected: 0,
+    fighters: [defaultData]
+  }
+
+  export function fillAppDataLost (appData) {
+    if (appData.selected===undefined) appData.selected = 0
+    if (appData.fighters===undefined) appData.fighters = defaultData
+    return appData
   }
