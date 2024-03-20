@@ -11,10 +11,10 @@ function FTextInput( { label, text, changeText, bOnlyNumbers = false, paso = 1 }
     <div className='form-line-group'>
       <p className='form-textinput-text'>{label}</p>
       <input className='form-textinput-input' 
-             onChange={onChangeInput}
-             value={text}
-             type={sOnlyNumbers}
-             step={paso} ></input>
+            onChange={onChangeInput}
+            value={text}
+            type={sOnlyNumbers}
+            step={sOnlyNumbers?paso:''} ></input>
     </div>  
   )
 }

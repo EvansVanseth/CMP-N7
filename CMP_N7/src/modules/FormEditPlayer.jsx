@@ -22,16 +22,10 @@ function FormEditPlayer({ onClose, Data, UpdateData }) {
   function onNameChange (newText) { setNombreJugador(newText) }
   function onCLT (newText) { setLT(parseInt(newText)) }
   function onCLR (newText) { setLR(parseInt(newText)) }
-  function onCLB (newText) { 
-    const newValue = parseFloat(newText);
-    if(!isNaN(newValue)) setLB(newValue);
-  }
+  function onCLB (newText) { setLB(parseFloat(newText)) }
   function onCST (newText) { setST(parseInt(newText)) }
   function onCSR (newText) { setSR(parseInt(newText)) }
-  function onCSB (newText) { 
-    const newValue = parseFloat(newText);
-    if(!isNaN(newValue)) setSB(newValue);
-  }
+  function onCSB (newText) { setSB(parseFloat(newText)) }
   function onOK () {
     const newData = {...Data}
     newData.playerName = nombreJugador
