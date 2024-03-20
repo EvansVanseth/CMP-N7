@@ -72,12 +72,12 @@ function FormEditPlayer({ onClose, Data, UpdateData }) {
       <FSection caption='Escudos' />
       <FTextInput label='Total (SH)' text={sT} changeText={onCST} bOnlyNumbers={true}/>
       <FTextInput label='Regeneración (RE)' text={sR} changeText={onCSR} bOnlyNumbers={true}/>
-      <FTextInput label='Blindaje (BP)' text={sB} changeText={onCSB} bOnlyNumbers={true}/>
+      <FTextInput label='Blindaje (BP)' text={sB} changeText={onCSB} bOnlyNumbers={true} paso='0.5'/>
       <FButton texts={['Reactivación forzada']} onClicks={[onClickAE]} disableds={[Data.shldValue!==0]}/>
       <FSection caption='Salud' />
       <FTextInput label='Total (PG)' text={lT} changeText={onCLT} bOnlyNumbers={true}/>
       <FTextInput label='Regeneración (RE)' text={lR} changeText={onCLR} bOnlyNumbers={true}/>
-      <FTextInput label='Blindaje (BP)' text={lB} changeText={onCLB} bOnlyNumbers={true}/>
+      <FTextInput label='Blindaje (BP)' text={lB} changeText={onCLB} bOnlyNumbers={true} paso='0.5'/>
       <FButton texts={['ACEPTAR']} onClicks={[onOK]} />
       <hr />
       <FSection caption='Restaurar datos de fabrica' closeable={false} />

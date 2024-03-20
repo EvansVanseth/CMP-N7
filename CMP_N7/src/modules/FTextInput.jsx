@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import '../css/FTextInput.css'
 
-function FTextInput( { label, text, changeText, bOnlyNumbers = false } ) {
+function FTextInput( { label, text, changeText, bOnlyNumbers = false, paso = 1 } ) {
   function onChangeInput (event) {
     changeText(event.target.value)
   }
@@ -13,7 +13,8 @@ function FTextInput( { label, text, changeText, bOnlyNumbers = false } ) {
       <input className='form-textinput-input' 
              onChange={onChangeInput}
              value={text}
-             type={sOnlyNumbers} ></input>
+             type={sOnlyNumbers}
+             step={paso} ></input>
     </div>  
   )
 }
