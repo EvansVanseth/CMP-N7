@@ -11,7 +11,6 @@ function FButton( { keyID, texts, onClicks, disableds } ) {
           else btnClass = (disableds[index]?
                             'btn form-button form-button-disabled':
                             'btn form-button')
-          if (disableds!==undefined) console.log (text, disableds[index], btnClass)
           const localKey = keyID + index
           if (disableds===undefined) {
             return (<button key={localKey} className={btnClass} 

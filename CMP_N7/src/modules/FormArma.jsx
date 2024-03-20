@@ -20,7 +20,6 @@ function FormArma ({ onClose, oArma, armaIndex, Data, UpdateData }) {
   function onNombreChange (newText) { setNombreArma(newText) }
   function onCargadChange (newText) { setCargadArma(parseInt(newText)) }
   function onRecargaChange (Event) { 
-    console.log(Event.target.value)
     setRecargArma(Event.target.value) 
   }
   function onOK () {
